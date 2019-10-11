@@ -21,13 +21,19 @@
                                     <constraint firstAttribute="width" constant="60" id="7i8-xj-0dW"/>
                                 </constraints>
                                 <state key="normal" image="camera" catalog="system"/>
+                                <connections>
+                                    <action selector="tapCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q4g-zA-JxT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZr-Za-bnH">
-                                <rect key="frame" x="50" y="109" width="60" height="22"/>
+                                <rect key="frame" x="50" y="109" width="78" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="4tj-fb-fOs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="4tj-fb-fOs"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="photo" catalog="system"/>
+                                <connections>
+                                    <action selector="tapImageData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iuV-SQ-VXj"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5M2-io-UPY">
                                 <rect key="frame" x="49" y="162" width="316" height="369"/>
@@ -45,10 +51,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="666-Qw-6ms" firstAttribute="leading" secondItem="RZr-Za-bnH" secondAttribute="trailing" constant="176" id="EM2-Th-iPb"/>
                             <constraint firstItem="5M2-io-UPY" firstAttribute="top" secondItem="666-Qw-6ms" secondAttribute="bottom" constant="31" id="FNt-3y-yUa"/>
                             <constraint firstItem="RZr-Za-bnH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="QTw-ye-mn1"/>
                             <constraint firstItem="5M2-io-UPY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RHk-7g-Uyh"/>
-                            <constraint firstItem="RZr-Za-bnH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Yot-7R-4qp"/>
+                            <constraint firstItem="RZr-Za-bnH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yot-7R-4qp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AOg-4y-JED" secondAttribute="trailing" constant="10" id="c6N-hn-bYy"/>
                             <constraint firstItem="5M2-io-UPY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="cRM-AX-cqD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5M2-io-UPY" secondAttribute="trailing" constant="49" id="dYU-Hz-u3H"/>
@@ -59,6 +66,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="LabelOutput" destination="AOg-4y-JED" id="b04-f2-fXb"/>
+                        <outlet property="buttonCamera" destination="666-Qw-6ms" id="pNj-cM-KB9"/>
+                        <outlet property="buttonImage" destination="RZr-Za-bnH" id="htq-ZK-s7g"/>
+                        <outlet property="imageData" destination="5M2-io-UPY" id="KCX-B2-DKl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
